@@ -4,947 +4,929 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amira Basuony Ammar — Junior UI/UX Designer</title>
-  <meta name="description" content="Junior UI/UX Designer crafting simple, intuitive digital experiences. Specializing in user research, wireframing, and high-fidelity interface design with Figma." />
+  <meta name="description" content="Junior UI/UX Designer crafting simple, intuitive digital experiences. User research, wireframing, and high-fidelity interface design in Figma." />
   <meta name="keywords" content="Amira Basuony, UI/UX Designer, Figma, Wireframing, Prototyping, User Research, Mobile App Design, Egypt" />
   <meta property="og:title" content="Amira Basuony Ammar — Junior UI/UX Designer" />
   <meta property="og:description" content="Designing simple, intuitive digital experiences. Figma · User Research · Prototyping." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/profile.jpg" />
   <link rel="icon" href="assets/img/favicon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-0: #0d0a14;
-      --bg-1: #14101e;
-      --bg-2: #1c1729;
-      --bg-3: #251f36;
-      --surface: rgba(255, 255, 255, 0.03);
-      --surface-hover: rgba(255, 255, 255, 0.06);
-      --border: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(255, 255, 255, 0.14);
-      --text: #f0ecf7;
-      --text-muted: #a59bb8;
-      --text-dim: #6f6685;
-      --accent: #ec4899;
-      --accent-2: #a78bfa;
-      --accent-3: #fb7185;
-      --gradient-1: linear-gradient(135deg, #ec4899 0%, #a78bfa 100%);
-      --gradient-2: linear-gradient(135deg, #a78bfa 0%, #fb7185 100%);
-      --gradient-text: linear-gradient(135deg, #ec4899 0%, #a78bfa 50%, #fb7185 100%);
-      --shadow-glow: 0 0 40px rgba(236, 72, 153, 0.18);
-      --radius: 14px;
-      --radius-lg: 20px;
+      --paper: #f4f1ea;
+      --paper-2: #ebe7dc;
+      --paper-3: #e3ddcd;
+      --ink: #0a0a0a;
+      --ink-2: #1a1a1a;
+      --muted: #5a5751;
+      --dim: #8a8780;
+      --rule: rgba(10, 10, 10, 0.12);
+      --rule-soft: rgba(10, 10, 10, 0.06);
+      --accent: #d93f24;
+      --accent-deep: #b3321b;
+      --accent-soft: rgba(217, 63, 36, 0.08);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-0);
-      color: var(--text);
+      background: var(--paper);
+      color: var(--ink);
       line-height: 1.6;
       overflow-x: hidden;
-      font-size: 15px;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* Animated background */
-    .bg-orbs {
+    /* Subtle paper grain */
+    body::before {
+      content: '';
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      overflow: hidden;
-    }
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      opacity: 0.32;
-      animation: float 20s infinite ease-in-out;
-    }
-    .orb-1 { width: 500px; height: 500px; background: #ec4899; top: -100px; left: -150px; }
-    .orb-2 { width: 450px; height: 450px; background: #a78bfa; top: 40%; right: -100px; animation-delay: -5s; }
-    .orb-3 { width: 400px; height: 400px; background: #fb7185; bottom: -100px; left: 30%; animation-delay: -10s; }
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(50px, -50px) scale(1.1); }
-      66% { transform: translate(-30px, 30px) scale(0.95); }
-    }
-
-    .grid-pattern {
-      position: fixed;
-      inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 50px 50px;
-      pointer-events: none;
-      z-index: 0;
-      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+        radial-gradient(circle at 20% 30%, rgba(0,0,0,0.015) 1px, transparent 1px),
+        radial-gradient(circle at 70% 70%, rgba(0,0,0,0.015) 1px, transparent 1px),
+        radial-gradient(circle at 40% 90%, rgba(0,0,0,0.012) 1px, transparent 1px);
+      background-size: 4px 4px, 6px 6px, 3px 3px;
+      opacity: 0.6;
     }
+
+    a { color: var(--ink); }
 
     /* Navigation */
     nav.topnav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 18px 0;
-      background: rgba(13, 10, 20, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      transition: all 0.3s ease;
+      padding: 22px 0;
+      background: rgba(244, 241, 234, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
     }
     .nav-inner {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 22px;
       letter-spacing: -0.02em;
       display: flex;
-      align-items: center;
+      align-items: baseline;
       gap: 10px;
-      color: var(--text);
+      color: var(--ink);
       text-decoration: none;
+      font-variation-settings: "opsz" 144, "SOFT" 50;
     }
-    .logo-mark {
-      width: 36px; height: 36px;
-      background: var(--gradient-1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: #0d0a14;
-      font-size: 16px;
-    }
+    .logo .dot { color: var(--accent); }
     .nav-links {
       display: flex;
-      gap: 8px;
+      gap: 4px;
       list-style: none;
     }
     .nav-links a {
-      color: var(--text-muted);
+      color: var(--muted);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       padding: 8px 14px;
-      border-radius: 8px;
+      border-radius: 100px;
       transition: all 0.2s ease;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.02em;
     }
-    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-links a:hover { color: var(--ink); background: var(--paper-2); }
     .nav-cta {
-      padding: 10px 18px;
-      background: var(--text);
-      color: var(--bg-0);
-      border-radius: 10px;
+      padding: 11px 20px;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 100px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.02em;
     }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(255,255,255,0.15); }
+    .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
     .mobile-toggle {
       display: none;
       background: none;
-      border: 1px solid var(--border);
-      color: var(--text);
+      border: 1px solid var(--rule);
+      color: var(--ink);
       padding: 8px 12px;
-      border-radius: 8px;
+      border-radius: 100px;
       cursor: pointer;
       font-size: 20px;
     }
 
     /* Layout */
     .container {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 40px;
       position: relative;
       z-index: 1;
     }
 
     section {
-      padding: 100px 0;
+      padding: 120px 0;
       position: relative;
       z-index: 1;
     }
 
-    .section-label {
-      display: inline-flex;
+    /* Section labels: editorial numbered */
+    .eyebrow {
+      display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 100px;
+      gap: 14px;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 20px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
     }
-    .section-label::before {
-      content: '';
-      width: 6px; height: 6px;
+    .eyebrow .num {
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+    .eyebrow .line {
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
       background: var(--accent);
-      border-radius: 50%;
-      box-shadow: 0 0 10px var(--accent);
     }
 
     .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 16px;
+      font-family: 'Fraunces', serif;
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1;
+      margin-bottom: 24px;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+    }
+    .section-title em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
     }
     .section-subtitle {
-      font-size: 17px;
-      color: var(--text-muted);
+      font-size: 18px;
+      color: var(--muted);
       max-width: 640px;
-      margin-bottom: 60px;
+      margin-bottom: 72px;
+      line-height: 1.6;
     }
 
-    .gradient-text {
-      background: var(--gradient-text);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* HERO */
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 120px 0 60px;
+      padding: 140px 0 80px;
       position: relative;
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 80px;
+    .hero-meta {
+      display: flex;
       align-items: center;
+      gap: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 48px;
     }
-    .hero-status {
+    .hero-meta .pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 8px 16px;
-      background: rgba(236, 72, 153, 0.08);
-      border: 1px solid rgba(236, 72, 153, 0.2);
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1px solid var(--ink);
       border-radius: 100px;
-      font-size: 13px;
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 28px;
+      color: var(--ink);
+      background: var(--paper);
     }
-    .status-dot {
-      width: 8px; height: 8px;
+    .hero-meta .pill .dot-live {
+      width: 7px; height: 7px;
       background: var(--accent);
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(236,72,153,0.7); }
-      50% { box-shadow: 0 0 0 8px rgba(236,72,153,0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(217,63,36,0.5); }
+      50% { box-shadow: 0 0 0 8px rgba(217,63,36,0); }
     }
-    .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(40px, 7vw, 76px);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
+
+    .hero-headline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(56px, 11vw, 168px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.88;
+      margin-bottom: 56px;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
     }
-    .hero h1 .role {
+    .hero-headline .name-block {
       display: block;
-      background: var(--gradient-text);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+    .hero-headline .role-block {
+      display: block;
+      font-style: italic;
+      font-weight: 300;
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+    }
+    .hero-headline .role-block .ampersand {
+      color: var(--accent);
+      display: inline-block;
+      transform: translateY(-4px);
+    }
+
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 80px;
+      align-items: end;
+      padding-top: 56px;
+      border-top: 1px solid var(--rule);
+    }
+    .hero-bottom .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .hero-desc {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      line-height: 1.45;
+      color: var(--ink-2);
+      font-weight: 350;
+      max-width: 540px;
+      font-variation-settings: "opsz" 24, "SOFT" 50;
+    }
+    .hero-desc em {
+      font-style: italic;
+      color: var(--accent);
     }
     .hero-typed {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 18px;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-      min-height: 28px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 18px;
+      min-height: 20px;
     }
     .hero-typed .cursor {
       display: inline-block;
-      width: 2px;
-      height: 22px;
+      width: 7px;
+      height: 14px;
       background: var(--accent);
-      vertical-align: middle;
-      margin-left: 3px;
+      vertical-align: text-bottom;
+      margin-left: 2px;
       animation: blink 1s infinite;
     }
     @keyframes blink { 50% { opacity: 0; } }
-    .hero-desc {
-      font-size: 17px;
-      color: var(--text-muted);
-      max-width: 580px;
-      margin-bottom: 36px;
-      line-height: 1.7;
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 14px 26px;
-      border-radius: 12px;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 100px;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 13px;
       text-decoration: none;
       transition: all 0.25s ease;
       border: 1px solid transparent;
       cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
     .btn-primary {
-      background: var(--gradient-1);
-      color: #0d0a14;
+      background: var(--ink);
+      color: var(--paper);
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(236,72,153,0.3); }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
     .btn-secondary {
-      background: var(--surface);
-      color: var(--text);
-      border: 1px solid var(--border-strong);
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--ink);
     }
-    .btn-secondary:hover { background: var(--surface-hover); border-color: var(--text-muted); }
+    .btn-secondary:hover { background: var(--ink); color: var(--paper); }
 
-    .hero-socials { display: flex; gap: 14px; }
+    .hero-socials { display: flex; gap: 10px; flex-wrap: wrap; }
     .social-icon {
       width: 44px; height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      color: var(--text-muted);
+      background: transparent;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
+      color: var(--ink);
       text-decoration: none;
-      font-size: 18px;
+      font-size: 17px;
       transition: all 0.25s ease;
     }
     .social-icon:hover {
-      color: var(--accent);
-      border-color: var(--accent);
+      color: var(--paper);
+      background: var(--ink);
+      border-color: var(--ink);
       transform: translateY(-2px);
-      box-shadow: var(--shadow-glow);
     }
 
-    /* Hero photo */
-    .hero-photo-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-    .photo-frame {
-      position: relative;
-      width: 380px;
-      height: 380px;
-    }
-    .photo-frame::before {
-      content: '';
-      position: absolute;
-      inset: -20px;
-      background: var(--gradient-text);
-      border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.32;
-      animation: rotate 12s linear infinite;
-    }
-    @keyframes rotate { to { transform: rotate(360deg); } }
-    .photo-frame .photo-fallback {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 3px solid var(--border-strong);
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--gradient-1);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 96px;
-      font-weight: 700;
-      color: #0d0a14;
-      letter-spacing: -0.04em;
-    }
-    .photo-frame img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid var(--border-strong);
-      z-index: 2;
-    }
-    .photo-badge {
-      position: absolute;
-      background: var(--bg-2);
-      border: 1px solid var(--border-strong);
-      border-radius: 14px;
-      padding: 12px 18px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-      z-index: 3;
-      backdrop-filter: blur(10px);
-    }
-    .photo-badge.b1 { top: 10%; right: -20px; animation: floaty 4s ease-in-out infinite; }
-    .photo-badge.b2 { bottom: 15%; left: -30px; animation: floaty 5s ease-in-out infinite reverse; }
-    .photo-badge.b3 { bottom: -10px; right: 10%; animation: floaty 6s ease-in-out infinite; }
-    @keyframes floaty {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .photo-badge i { font-size: 18px; margin-right: 6px; vertical-align: middle; }
-    .photo-badge .b-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
-    .photo-badge .b-val { font-size: 14px; font-weight: 600; color: var(--text); }
-
-    /* Tech marquee */
+    /* Editorial marquee */
     .marquee-wrap {
-      margin-top: 60px;
-      padding: 24px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
       overflow: hidden;
-      background: var(--surface);
+      background: var(--paper);
     }
     .marquee-track {
       display: flex;
-      gap: 60px;
-      animation: scroll 30s linear infinite;
+      gap: 0;
+      animation: scroll 40s linear infinite;
       white-space: nowrap;
     }
     @keyframes scroll {
       to { transform: translateX(-50%); }
     }
     .marquee-item {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 16px;
-      color: var(--text-dim);
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--ink);
+      padding: 0 32px;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 28px;
     }
-    .marquee-item i { color: var(--accent); }
+    .marquee-item.italic {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 300;
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+    }
+    .marquee-item::after {
+      content: '✦';
+      font-size: 14px;
+      color: var(--accent);
+      margin-left: 28px;
+    }
 
-    /* Stats */
+    /* Stats — editorial table */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
     }
     .stat-card {
-      padding: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      transition: all 0.3s ease;
+      padding: 40px 28px;
+      border-right: 1px solid var(--rule);
       position: relative;
-      overflow: hidden;
+      transition: background 0.3s ease;
     }
-    .stat-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
-    .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--gradient-1);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .stat-card:hover::before { transform: scaleX(1); }
-    .stat-icon {
-      width: 48px; height: 48px;
-      background: rgba(236, 72, 153, 0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-size: 22px;
-      margin-bottom: 18px;
+    .stat-card:last-child { border-right: none; }
+    .stat-card:hover { background: var(--paper-2); }
+    .stat-card .stat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      margin-bottom: 24px;
     }
     .stat-value {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 42px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1;
-      margin-bottom: 8px;
+      font-family: 'Fraunces', serif;
+      font-size: 72px;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+      margin-bottom: 12px;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+    }
+    .stat-value em {
+      font-style: italic;
+      color: var(--accent);
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
     }
     .stat-label {
-      color: var(--text-muted);
-      font-size: 14px;
-      font-weight: 500;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
     }
 
     /* About */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+      gap: 80px;
+      align-items: start;
     }
     .about-text p {
-      color: var(--text-muted);
-      font-size: 16px;
-      line-height: 1.8;
+      color: var(--ink-2);
+      font-size: 17px;
+      line-height: 1.75;
       margin-bottom: 20px;
     }
+    .about-text p.lead {
+      font-family: 'Fraunces', serif;
+      font-size: 24px;
+      line-height: 1.45;
+      font-weight: 350;
+      color: var(--ink);
+      margin-bottom: 28px;
+      font-variation-settings: "opsz" 24, "SOFT" 50;
+    }
+    .about-text p.lead::first-letter {
+      font-family: 'Fraunces', serif;
+      font-size: 86px;
+      font-weight: 500;
+      float: left;
+      line-height: 0.8;
+      margin: 8px 14px 0 0;
+      color: var(--accent);
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+    }
+    .about-text strong { color: var(--ink); font-weight: 600; }
     .info-list {
       list-style: none;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 30px;
+      border-top: 1px solid var(--ink);
     }
     .info-list li {
+      padding: 18px 4px;
+      border-bottom: 1px solid var(--rule);
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      padding: 14px 18px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      gap: 6px;
     }
+    .info-list li:nth-child(odd) { border-right: 1px solid var(--rule); padding-right: 18px; }
+    .info-list li:nth-child(even) { padding-left: 18px; }
     .info-list .label {
-      font-size: 11px;
-      color: var(--text-dim);
+      font-size: 10px;
+      color: var(--muted);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.18em;
+      font-family: 'JetBrains Mono', monospace;
     }
-    .info-list .value { font-size: 14px; color: var(--text); font-weight: 500; }
+    .info-list .value {
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      color: var(--ink);
+      font-weight: 500;
+      font-variation-settings: "opsz" 24, "SOFT" 30;
+    }
 
-    .about-card-stack { display: grid; gap: 16px; }
-    .feature-card {
-      padding: 24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+    .feature-list {
       display: flex;
-      gap: 18px;
-      align-items: flex-start;
+      flex-direction: column;
+    }
+    .feature-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
       transition: all 0.25s ease;
     }
-    .feature-card:hover { background: var(--surface-hover); border-color: var(--border-strong); }
-    .feature-card .icon {
-      flex-shrink: 0;
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      background: var(--gradient-1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0d0a14;
-      font-size: 20px;
+    .feature-row:first-child { border-top: 1px solid var(--ink); padding-top: 32px; }
+    .feature-row:last-child { border-bottom: 1px solid var(--ink); }
+    .feature-row:hover { padding-left: 12px; }
+    .feature-row .icon {
+      font-size: 32px;
+      color: var(--accent);
+      line-height: 1;
     }
-    .feature-card h4 { font-size: 16px; margin-bottom: 6px; color: var(--text); font-family: 'Space Grotesk', sans-serif; }
-    .feature-card p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+    .feature-row h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      letter-spacing: -0.015em;
+      font-variation-settings: "opsz" 24, "SOFT" 30;
+    }
+    .feature-row p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
 
-    /* Skills */
+    /* Skills — pill cloud + headlines */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 0;
+      border-top: 1px solid var(--ink);
+      border-left: 1px solid var(--rule);
     }
     .skill-cat {
-      padding: 28px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      transition: all 0.3s ease;
-      position: relative;
+      padding: 36px 32px;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.3s ease;
     }
-    .skill-cat:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+    .skill-cat:hover { background: var(--paper-2); }
+    .skill-cat .cat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      margin-bottom: 16px;
+    }
     .skill-cat h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 18px;
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 22px;
+      letter-spacing: -0.02em;
+      font-variation-settings: "opsz" 24, "SOFT" 30;
       display: flex;
-      align-items: center;
+      align-items: baseline;
       gap: 10px;
     }
     .skill-cat h3 i {
       color: var(--accent);
       font-size: 20px;
     }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .tag {
       padding: 6px 12px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      background: transparent;
+      border: 1px solid var(--rule);
+      border-radius: 100px;
       font-size: 12px;
       font-weight: 500;
-      color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
+      color: var(--ink-2);
       transition: all 0.2s ease;
     }
     .tag:hover {
-      background: rgba(236, 72, 153, 0.1);
-      border-color: var(--accent);
-      color: var(--accent);
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
     }
 
-    /* Services */
-    .services-grid {
+    /* Services — magazine list */
+    .services-list {
+      border-top: 1px solid var(--ink);
+    }
+    .service-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .service-card {
-      padding: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      grid-template-columns: 100px 1.6fr 2fr;
+      gap: 40px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
       transition: all 0.3s ease;
       position: relative;
-      overflow: hidden;
     }
-    .service-card::after {
+    .service-row::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: radial-gradient(circle at top right, rgba(236,72,153,0.1), transparent 50%);
-      opacity: 0;
-      transition: opacity 0.3s;
+      left: 0; right: 0;
+      top: 0; bottom: 0;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s ease;
+      z-index: -1;
     }
-    .service-card:hover::after { opacity: 1; }
-    .service-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
-    .service-num {
+    .service-row:hover { padding-left: 24px; padding-right: 24px; color: var(--paper); }
+    .service-row:hover::before { transform: scaleX(1); }
+    .service-row:hover .svc-num,
+    .service-row:hover .svc-meta { color: rgba(255,255,255,0.7); }
+    .service-row:hover .svc-icon { color: var(--paper); }
+    .service-row:last-child { border-bottom: 1px solid var(--ink); }
+    .svc-num {
       font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
-      color: var(--text-dim);
-      margin-bottom: 24px;
-      letter-spacing: 0.1em;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      transition: color 0.3s ease;
     }
-    .service-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 20px;
-      margin-bottom: 14px;
-      font-weight: 600;
-      position: relative;
-      z-index: 1;
+    .svc-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
-    .service-card p {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
-    }
-    .service-icon {
-      font-size: 32px;
+    .svc-icon {
+      font-size: 28px;
       color: var(--accent);
-      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+    .svc-title h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+    }
+    .svc-meta {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--muted);
+      transition: color 0.3s ease;
     }
 
-    /* Process timeline */
-    .timeline {
-      position: relative;
-      padding-left: 0;
+    /* Process — editorial timeline */
+    .process-list {
+      border-top: 1px solid var(--ink);
     }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 24px;
-      top: 8px; bottom: 8px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent), transparent);
+    .process-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 48px;
+      padding: 56px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
     }
-    .timeline-item {
-      position: relative;
-      padding-left: 70px;
-      padding-bottom: 50px;
-    }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-dot {
-      position: absolute;
-      left: 14px;
-      top: 8px;
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      background: var(--bg-2);
-      border: 2px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .timeline-dot::after {
-      content: '';
-      width: 8px; height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-      box-shadow: 0 0 12px var(--accent);
-    }
-    .timeline-card {
-      padding: 28px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      transition: all 0.3s ease;
-    }
-    .timeline-card:hover { border-color: var(--border-strong); transform: translateX(4px); }
-    .timeline-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 12px;
-      align-items: center;
-    }
-    .timeline-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      padding: 4px 10px;
-      background: rgba(236, 72, 153, 0.1);
+    .process-item:last-child { border-bottom: 1px solid var(--ink); }
+    .process-step {
+      font-family: 'Fraunces', serif;
+      font-size: 96px;
+      font-weight: 400;
+      font-style: italic;
       color: var(--accent);
-      border-radius: 6px;
-      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
     }
-    .timeline-location {
-      font-size: 13px;
-      color: var(--text-dim);
-      display: flex;
+    .process-content h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 8px;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+    }
+    .process-content .stage {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 8px;
     }
-    .timeline-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 22px;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-    .timeline-company {
-      color: var(--accent-2);
-      font-weight: 500;
-      margin-bottom: 16px;
-      font-size: 15px;
-    }
-    .timeline-card ul { list-style: none; padding: 0; }
-    .timeline-card ul li {
+    .process-content ul { list-style: none; padding: 0; max-width: 720px; }
+    .process-content ul li {
       position: relative;
-      padding-left: 22px;
+      padding-left: 24px;
       margin-bottom: 10px;
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.6;
+      color: var(--ink-2);
+      font-size: 16px;
+      line-height: 1.65;
     }
-    .timeline-card ul li::before {
-      content: '▸';
+    .process-content ul li::before {
+      content: '—';
       position: absolute;
       left: 0;
       color: var(--accent);
-      font-weight: bold;
     }
-    .timeline-card ul li strong { color: var(--text); font-weight: 600; }
-    .tech-pills {
+    .process-content ul li strong { color: var(--ink); font-weight: 600; }
+    .process-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-    .tech-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      padding: 3px 9px;
-      background: rgba(167, 139, 250, 0.1);
-      border: 1px solid rgba(167, 139, 250, 0.25);
-      border-radius: 6px;
-      color: var(--accent-2);
+      margin-top: 20px;
     }
 
-    /* Projects */
+    /* Projects — case study cards */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
     }
     .project-card {
-      padding: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      transition: all 0.3s ease;
-      position: relative;
+      background: var(--paper);
+      border: 1px solid var(--ink);
       overflow: hidden;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
     }
-    .project-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
+    .project-card:hover { transform: translateY(-6px); box-shadow: 16px 16px 0 var(--accent); }
     .project-visual {
       width: 100%;
-      height: 180px;
-      border-radius: var(--radius);
-      margin-bottom: 24px;
+      height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 64px;
-      color: rgba(255,255,255,0.92);
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid var(--ink);
     }
     .project-visual.home-repair {
-      background: linear-gradient(135deg, #ec4899 0%, #a78bfa 100%);
+      background: #f0d9c4;
+      color: #5d2a16;
     }
     .project-visual.sleep-app {
-      background: linear-gradient(135deg, #6366f1 0%, #a78bfa 50%, #ec4899 100%);
+      background: #c4cde0;
+      color: #1d2540;
     }
     .project-visual::before {
       content: '';
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-      background-size: 20px 20px;
+        linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
-    .project-visual i { position: relative; z-index: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
-    .project-header {
+    .project-visual i {
+      position: relative;
+      z-index: 1;
+      font-size: 120px;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+    }
+    .project-body {
+      padding: 36px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-meta {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 16px;
-      gap: 16px;
-    }
-    .project-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 19px;
-      font-weight: 600;
-      line-height: 1.3;
-    }
-    .project-tag {
+      align-items: center;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      padding: 4px 10px;
-      background: rgba(251, 113, 133, 0.1);
-      border: 1px solid rgba(251, 113, 133, 0.25);
-      color: var(--accent-3);
-      border-radius: 6px;
-      white-space: nowrap;
-      flex-shrink: 0;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .project-meta .tag-cat { color: var(--accent); }
+    .project-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
     }
     .project-client {
-      font-size: 13px;
-      color: var(--text-dim);
-      margin-bottom: 16px;
-      font-style: italic;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-family: 'JetBrains Mono', monospace;
     }
-    .project-card ul {
-      list-style: none;
-      padding: 0;
-    }
+    .project-card ul { list-style: none; padding: 0; margin-bottom: 24px; }
     .project-card ul li {
       position: relative;
-      padding-left: 18px;
+      padding-left: 20px;
       margin-bottom: 8px;
-      color: var(--text-muted);
-      font-size: 13px;
-      line-height: 1.6;
+      color: var(--ink-2);
+      font-size: 14px;
+      line-height: 1.65;
     }
     .project-card ul li::before {
       content: '→';
       position: absolute;
       left: 0;
       color: var(--accent);
+      font-weight: 500;
     }
-    .project-card ul li strong { color: var(--text); }
+    .project-card ul li strong { color: var(--ink); font-weight: 600; }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      margin-top: auto;
+    }
 
     /* Certifications */
     .certs-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
     }
     .cert-card {
-      padding: 36px 28px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      text-align: center;
-      transition: all 0.3s ease;
+      padding: 56px 40px;
+      border-right: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 28px;
+      align-items: start;
+      transition: background 0.3s ease;
     }
-    .cert-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-glow);
-    }
+    .cert-card:last-child { border-right: none; }
+    .cert-card:hover { background: var(--paper-2); }
     .cert-icon {
       width: 64px; height: 64px;
-      margin: 0 auto 20px;
-      border-radius: 16px;
-      background: var(--gradient-1);
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #0d0a14;
-      font-size: 28px;
+      font-size: 26px;
     }
     .cert-card h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      font-variation-settings: "opsz" 24, "SOFT" 30;
     }
     .cert-card .cert-issuer {
-      font-size: 13px;
-      color: var(--accent-2);
-      margin-bottom: 8px;
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 14px;
       font-weight: 500;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
-    .cert-card p { font-size: 13px; color: var(--text-muted); }
+    .cert-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
     /* Contact */
+    .contact-hero {
+      text-align: center;
+      padding: 0 0 80px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 80px;
+    }
+    .contact-hero .section-title {
+      font-size: clamp(56px, 9vw, 128px);
+      margin-bottom: 32px;
+      letter-spacing: -0.04em;
+    }
+    .contact-hero .lead {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-weight: 350;
+      font-variation-settings: "opsz" 24, "SOFT" 50;
+    }
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      gap: 80px;
       align-items: start;
     }
-    .contact-info-list { display: grid; gap: 16px; }
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--ink);
+    }
     .contact-info-card {
-      padding: 24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      padding: 24px 4px;
+      border-bottom: 1px solid var(--rule);
       display: flex;
       gap: 18px;
       align-items: center;
@@ -952,144 +934,184 @@
       text-decoration: none;
       color: inherit;
     }
+    .contact-info-card:last-child { border-bottom: 1px solid var(--ink); }
     .contact-info-card:hover {
-      background: var(--surface-hover);
-      border-color: var(--accent);
-      transform: translateX(4px);
+      padding-left: 16px;
+      color: var(--accent);
     }
     .contact-info-card .icon-box {
-      width: 52px; height: 52px;
-      background: rgba(236, 72, 153, 0.1);
-      border-radius: 12px;
+      width: 48px; height: 48px;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent);
-      font-size: 22px;
+      color: var(--ink);
+      font-size: 18px;
       flex-shrink: 0;
+      transition: all 0.25s ease;
     }
-    .contact-info-card .label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-    .contact-info-card .value { font-size: 15px; color: var(--text); font-weight: 500; }
+    .contact-info-card:hover .icon-box {
+      background: var(--accent);
+      color: var(--paper);
+      border-color: var(--accent);
+    }
+    .contact-info-card .label {
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .contact-info-card .value {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      color: inherit;
+      font-weight: 500;
+      font-variation-settings: "opsz" 24, "SOFT" 30;
+    }
 
     .contact-form {
-      padding: 36px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      padding: 40px;
+      background: var(--paper-2);
+      border: 1px solid var(--ink);
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-    .form-group { margin-bottom: 16px; }
+    .form-group { margin-bottom: 18px; }
     .form-group label {
       display: block;
-      font-size: 12px;
-      color: var(--text-muted);
+      font-size: 10px;
+      color: var(--muted);
       margin-bottom: 8px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 500;
+      letter-spacing: 0.2em;
+      font-family: 'JetBrains Mono', monospace;
     }
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 14px 16px;
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--text);
-      font-size: 14px;
-      font-family: inherit;
+      padding: 14px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink);
+      font-size: 16px;
+      font-family: 'Fraunces', serif;
       transition: all 0.2s ease;
+      font-variation-settings: "opsz" 24, "SOFT" 30;
     }
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+      border-bottom-color: var(--accent);
     }
     .form-group textarea { resize: vertical; min-height: 130px; }
     .form-submit {
       width: 100%;
-      padding: 14px;
-      background: var(--gradient-1);
-      color: #0d0a14;
+      padding: 18px;
+      background: var(--ink);
+      color: var(--paper);
       border: none;
-      border-radius: 10px;
+      border-radius: 100px;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 13px;
       cursor: pointer;
       transition: all 0.25s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 12px;
     }
-    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(236,72,153,0.3); }
+    .form-submit:hover { background: var(--accent); }
 
     /* Footer */
     footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-dim);
+      padding: 48px 0 40px;
+      border-top: 1px solid var(--ink);
+      color: var(--muted);
       font-size: 13px;
       position: relative;
       z-index: 1;
     }
-    footer .made-with { margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    footer .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer .made-with {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--ink);
+      font-variation-settings: "opsz" 24, "SOFT" 100, "WONK" 1;
+    }
     footer a { color: var(--accent); text-decoration: none; }
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-      .stats-grid, .skills-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-bottom, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .stats-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
       .certs-grid { grid-template-columns: 1fr; }
+      .certs-grid .cert-card { border-right: none; border-bottom: 1px solid var(--rule); }
+      .certs-grid .cert-card:last-child { border-bottom: none; }
       .projects-grid { grid-template-columns: 1fr; }
-      .photo-frame { width: 300px; height: 300px; }
-      .photo-frame .photo-fallback { font-size: 80px; }
+      .service-row { grid-template-columns: 80px 1fr; }
+      .service-row .svc-meta { grid-column: 1 / -1; padding-top: 12px; }
+      .process-item { grid-template-columns: 80px 1fr; gap: 28px; }
+      .process-step { font-size: 64px; }
     }
     @media (max-width: 720px) {
       .container { padding: 0 20px; }
-      section { padding: 70px 0; }
+      .nav-inner { padding: 0 20px; }
+      section { padding: 80px 0; }
       .nav-links { display: none; }
       .mobile-toggle { display: block; }
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px; left: 0; right: 0;
-        background: var(--bg-1);
-        border-bottom: 1px solid var(--border);
+        top: 76px; left: 0; right: 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
         padding: 16px 24px;
         gap: 4px;
       }
-      .stats-grid, .skills-grid, .services-grid, .form-row { grid-template-columns: 1fr; }
+      .stats-grid, .skills-grid, .form-row { grid-template-columns: 1fr; }
+      .stat-card { border-right: none; border-bottom: 1px solid var(--rule); }
+      .stat-card:last-child { border-bottom: none; }
+      .skill-cat { border-right: none; }
       .info-list { grid-template-columns: 1fr; }
-      .timeline-item { padding-left: 50px; }
-      .timeline::before { left: 14px; }
-      .timeline-dot { left: 4px; width: 20px; height: 20px; }
-      .photo-frame { width: 260px; height: 260px; }
-      .photo-frame .photo-fallback { font-size: 64px; }
-      .photo-badge.b1, .photo-badge.b2, .photo-badge.b3 { display: none; }
+      .info-list li:nth-child(odd) { border-right: none; padding-right: 4px; }
+      .info-list li:nth-child(even) { padding-left: 4px; }
+      .service-row { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+      .service-row:hover { padding-left: 12px; padding-right: 12px; }
+      .svc-title h3 { font-size: 26px; }
+      .process-item { grid-template-columns: 1fr; gap: 16px; padding: 36px 0; }
+      .process-step { font-size: 56px; }
+      .process-content h3 { font-size: 28px; }
+      .marquee-item { font-size: 24px; padding: 0 20px; }
+      .hero-headline { line-height: 0.95; }
       .nav-cta { display: none; }
+      .contact-form { padding: 24px; }
+      footer .footer-inner { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-orbs">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-  <div class="grid-pattern"></div>
-
   <!-- NAV -->
   <nav class="topnav">
     <div class="nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-mark">AA</span>
-        <span>Amira Ammar</span>
-      </a>
+      <a href="#" class="logo">Amira Ammar<span class="dot">.</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -1098,7 +1120,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Hire Me <i class="bi bi-arrow-right"></i></a>
+      <a href="#contact" class="nav-cta">Hire Me <i class="bi bi-arrow-up-right"></i></a>
       <button class="mobile-toggle" id="mobileToggle"><i class="bi bi-list"></i></button>
     </div>
   </nav>
@@ -1106,44 +1128,39 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-status"><span class="status-dot"></span> Available for new opportunities</div>
-          <h1>
-            Amira Basuony
-            <span class="role">Junior UI/UX <br/>Designer.</span>
-          </h1>
-          <div class="hero-typed">
-            <span id="typed"></span><span class="cursor"></span>
-          </div>
+      <div class="hero-meta">
+        <span class="pill"><span class="dot-live"></span>Available for work</span>
+        <span>Portfolio · MMXXVI</span>
+        <span>Based in Egypt</span>
+      </div>
+      <h1 class="hero-headline">
+        <span class="name-block">Amira</span>
+        <span class="role-block">Basuony <span class="ampersand">&amp;</span> UI/UX</span>
+        <span class="name-block">Designer.</span>
+      </h1>
+      <div class="hero-bottom">
+        <div>
+          <div class="label">— Currently</div>
           <p class="hero-desc">
-            I craft simple, intuitive digital experiences. From user research and wireframes to polished high-fidelity interfaces in Figma — I design with empathy, clarity, and a love for consistent visual systems.
+            I craft <em>simple, intuitive</em> digital experiences. From user research and wireframes to polished high-fidelity interfaces in Figma — designed with empathy, clarity, and care for visual systems.
           </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get in touch <i class="bi bi-arrow-right"></i></a>
-            <a href="#projects" class="btn btn-secondary">View my work <i class="bi bi-arrow-down"></i></a>
-          </div>
-          <div class="hero-socials">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.behance.net/" target="_blank" rel="noopener" class="social-icon" aria-label="Behance"><i class="bi bi-behance"></i></a>
-            <a href="mailto:amira.ammar7998@gmail.com" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
-            <a href="https://wa.me/201095820021" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-          </div>
+          <div class="hero-typed"><span id="typed"></span><span class="cursor"></span></div>
         </div>
-        <div class="hero-photo-wrap">
-          <div class="photo-frame">
-            <div class="photo-fallback">AA</div>
-            <div class="photo-badge b1">
-              <div class="b-label">Focus</div>
-              <div class="b-val"><i class="bi bi-pencil-square"></i>UI/UX Design</div>
+        <div class="hero-side">
+          <div>
+            <div class="label">— Connect</div>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get in touch <i class="bi bi-arrow-up-right"></i></a>
+              <a href="#projects" class="btn btn-secondary">View work</a>
             </div>
-            <div class="photo-badge b2">
-              <div class="b-label">Tool</div>
-              <div class="b-val"><i class="bi bi-palette" style="color:#ec4899"></i>Figma</div>
-            </div>
-            <div class="photo-badge b3">
-              <div class="b-label">Based in</div>
-              <div class="b-val"><i class="bi bi-geo-alt"></i>Egypt</div>
+          </div>
+          <div>
+            <div class="label">— Find me</div>
+            <div class="hero-socials">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.behance.net/" target="_blank" rel="noopener" class="social-icon" aria-label="Behance"><i class="bi bi-behance"></i></a>
+              <a href="mailto:amira.ammar7998@gmail.com" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              <a href="https://wa.me/201095820021" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
             </div>
           </div>
         </div>
@@ -1151,60 +1168,56 @@
     </div>
   </section>
 
-  <!-- TECH MARQUEE -->
+  <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span class="marquee-item"><i class="bi bi-stars"></i>Figma</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Wireframing</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Prototyping</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>User Research</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>User Flows</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Auto Layout</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Design Systems</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Usability Testing</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Visual Hierarchy</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Mobile UI</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Components</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Accessibility</span>
-      <!-- duplicate for infinite loop -->
-      <span class="marquee-item"><i class="bi bi-stars"></i>Figma</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Wireframing</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Prototyping</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>User Research</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>User Flows</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Auto Layout</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Design Systems</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Usability Testing</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Visual Hierarchy</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Mobile UI</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Components</span>
-      <span class="marquee-item"><i class="bi bi-stars"></i>Accessibility</span>
+      <span class="marquee-item">Figma</span>
+      <span class="marquee-item italic">Wireframing</span>
+      <span class="marquee-item">Prototyping</span>
+      <span class="marquee-item italic">User Research</span>
+      <span class="marquee-item">User Flows</span>
+      <span class="marquee-item italic">Auto Layout</span>
+      <span class="marquee-item">Design Systems</span>
+      <span class="marquee-item italic">Usability Testing</span>
+      <span class="marquee-item">Visual Hierarchy</span>
+      <span class="marquee-item italic">Mobile UI</span>
+      <!-- dup -->
+      <span class="marquee-item">Figma</span>
+      <span class="marquee-item italic">Wireframing</span>
+      <span class="marquee-item">Prototyping</span>
+      <span class="marquee-item italic">User Research</span>
+      <span class="marquee-item">User Flows</span>
+      <span class="marquee-item italic">Auto Layout</span>
+      <span class="marquee-item">Design Systems</span>
+      <span class="marquee-item italic">Usability Testing</span>
+      <span class="marquee-item">Visual Hierarchy</span>
+      <span class="marquee-item italic">Mobile UI</span>
     </div>
   </div>
 
   <!-- STATS -->
-  <section id="stats" style="padding-top: 80px; padding-bottom: 40px;">
-    <div class="container">
+  <section id="stats" style="padding: 0;">
+    <div class="container" style="padding: 0;">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-phone"></i></div>
-          <div class="stat-value gradient-text">2+</div>
-          <div class="stat-label">Mobile UI/UX Projects</div>
+          <div class="stat-num">01 / 04</div>
+          <div class="stat-value">2<em>+</em></div>
+          <div class="stat-label">Mobile UI/UX projects shipped end-to-end</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-lightbulb"></i></div>
-          <div class="stat-value gradient-text">7+</div>
-          <div class="stat-label">Core Design Skills</div>
+          <div class="stat-num">02 / 04</div>
+          <div class="stat-value">7<em>+</em></div>
+          <div class="stat-label">Core design skills, from research to handoff</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-award"></i></div>
-          <div class="stat-value gradient-text">2</div>
-          <div class="stat-label">Certifications</div>
+          <div class="stat-num">03 / 04</div>
+          <div class="stat-value">02</div>
+          <div class="stat-label">Certifications: Google UX &amp; Figma Essentials</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-translate"></i></div>
-          <div class="stat-value gradient-text">2</div>
-          <div class="stat-label">Languages Spoken</div>
+          <div class="stat-num">04 / 04</div>
+          <div class="stat-value">02</div>
+          <div class="stat-label">Languages: Arabic native, English professional</div>
         </div>
       </div>
     </div>
@@ -1213,37 +1226,38 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <div class="section-label">About me</div>
-      <h2 class="section-title">Designing <span class="gradient-text">experiences that feel effortless</span></h2>
+      <div class="eyebrow"><span class="num">01</span><span>About</span><span class="line"></span></div>
+      <h2 class="section-title">Designing <em>experiences</em><br/>that feel effortless.</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a Junior UI/UX Designer based in Egypt, focused on creating simple, intuitive digital experiences. My journey into design has been shaped by structured courses — including the <strong style="color:var(--text)">Google UX Design Specialization</strong> — and self-driven mobile app projects where I take ideas from research all the way to high-fidelity Figma screens.</p>
-          <p>I care deeply about <strong style="color:var(--text)">usability</strong>, <strong style="color:var(--text)">consistency</strong>, and <strong style="color:var(--text)">clear visual communication</strong>. Every screen I design starts with the question: <em>"How can this be simpler for the user?"</em></p>
+          <p class="lead">I'm a Junior UI/UX Designer based in Egypt, focused on creating simple, intuitive digital experiences shaped by structured learning and self-driven mobile app projects.</p>
+          <p>My journey has been guided by the <strong>Google UX Design Specialization</strong> and hands-on Figma practice — taking ideas from research all the way to high-fidelity screens.</p>
+          <p>I care deeply about <strong>usability</strong>, <strong>consistency</strong>, and <strong>clear visual communication</strong>. Every screen I design starts with one question: <em>"How can this be simpler for the user?"</em></p>
           <ul class="info-list">
             <li><span class="label">Location</span><span class="value">Egypt</span></li>
-            <li><span class="label">Role</span><span class="value">Junior UI/UX Designer</span></li>
-            <li><span class="label">Languages</span><span class="value">Arabic, English</span></li>
+            <li><span class="label">Role</span><span class="value">Junior UI/UX</span></li>
             <li><span class="label">Main Tool</span><span class="value">Figma</span></li>
-            <li><span class="label">Email</span><span class="value">amira.ammar7998@gmail.com</span></li>
-            <li><span class="label">Phone</span><span class="value">+20 1095820021</span></li>
+            <li><span class="label">Languages</span><span class="value">AR · EN</span></li>
+            <li><span class="label">Email</span><span class="value" style="font-size:14px;">amira.ammar7998@gmail.com</span></li>
+            <li><span class="label">Phone</span><span class="value" style="font-size:14px;">+20 1095820021</span></li>
           </ul>
         </div>
-        <div class="about-card-stack">
-          <div class="feature-card">
+        <div class="feature-list">
+          <div class="feature-row">
             <div class="icon"><i class="bi bi-search"></i></div>
             <div>
               <h4>User-Centered Thinking</h4>
               <p>I start every project by understanding the people who'll actually use it — their goals, frustrations, and the contexts they're in.</p>
             </div>
           </div>
-          <div class="feature-card">
+          <div class="feature-row">
             <div class="icon"><i class="bi bi-grid-3x3-gap"></i></div>
             <div>
-              <h4>Consistency &amp; Design Systems</h4>
-              <p>I build with reusable components, auto layout, and clear visual hierarchy so designs scale without losing their voice.</p>
+              <h4>Systems &amp; Consistency</h4>
+              <p>Reusable components, auto layout, and clear visual hierarchy so designs scale without losing their voice.</p>
             </div>
           </div>
-          <div class="feature-card">
+          <div class="feature-row">
             <div class="icon"><i class="bi bi-eye"></i></div>
             <div>
               <h4>Clarity Over Cleverness</h4>
@@ -1258,12 +1272,13 @@
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-      <div class="section-label">Skills &amp; Tools</div>
-      <h2 class="section-title">My design <span class="gradient-text">toolkit</span></h2>
-      <p class="section-subtitle">From research to handoff — the skills and tools I use to take ideas from rough sketches to polished, usable interfaces.</p>
+      <div class="eyebrow"><span class="num">02</span><span>Toolkit</span><span class="line"></span></div>
+      <h2 class="section-title">From <em>sketch</em> to<br/>shipped screen.</h2>
+      <p class="section-subtitle">The skills and tools I use to take ideas from rough wireframes to polished, usable interfaces — research, design, prototyping, and handoff.</p>
 
       <div class="skills-grid">
         <div class="skill-cat">
+          <div class="cat-num">01</div>
           <h3><i class="bi bi-search"></i>UX Research</h3>
           <div class="skill-tags">
             <span class="tag">User Research</span>
@@ -1274,18 +1289,20 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">02</div>
           <h3><i class="bi bi-pencil"></i>UX Design</h3>
           <div class="skill-tags">
             <span class="tag">Wireframing</span>
             <span class="tag">Information Architecture</span>
-            <span class="tag">Low-Fidelity Prototypes</span>
+            <span class="tag">Lo-Fi Prototypes</span>
             <span class="tag">Usability Testing</span>
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">03</div>
           <h3><i class="bi bi-palette"></i>UI Design</h3>
           <div class="skill-tags">
-            <span class="tag">High-Fidelity Screens</span>
+            <span class="tag">Hi-Fi Screens</span>
             <span class="tag">Visual Hierarchy</span>
             <span class="tag">Typography</span>
             <span class="tag">Color Theory</span>
@@ -1293,6 +1310,7 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">04</div>
           <h3><i class="bi bi-magic"></i>Prototyping</h3>
           <div class="skill-tags">
             <span class="tag">Interactive Prototypes</span>
@@ -1302,6 +1320,7 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">05</div>
           <h3><i class="bi bi-grid-3x3-gap"></i>Design Systems</h3>
           <div class="skill-tags">
             <span class="tag">Components</span>
@@ -1312,6 +1331,7 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">06</div>
           <h3><i class="bi bi-tools"></i>Tools</h3>
           <div class="skill-tags">
             <span class="tag">Figma</span>
@@ -1321,6 +1341,7 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">07</div>
           <h3><i class="bi bi-universal-access"></i>Usability</h3>
           <div class="skill-tags">
             <span class="tag">Accessibility</span>
@@ -1330,6 +1351,7 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">08</div>
           <h3><i class="bi bi-chat-square-text"></i>Collaboration</h3>
           <div class="skill-tags">
             <span class="tag">Developer Handoff</span>
@@ -1339,6 +1361,7 @@
           </div>
         </div>
         <div class="skill-cat">
+          <div class="cat-num">09</div>
           <h3><i class="bi bi-translate"></i>Languages</h3>
           <div class="skill-tags">
             <span class="tag">Arabic — Native</span>
@@ -1352,168 +1375,160 @@
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <div class="section-label">What I do</div>
-      <h2 class="section-title">End-to-end <span class="gradient-text">design services</span></h2>
+      <div class="eyebrow"><span class="num">03</span><span>Services</span><span class="line"></span></div>
+      <h2 class="section-title">End-to-end <em>design</em><br/>services.</h2>
       <p class="section-subtitle">From early discovery to polished, ready-for-development screens — here's how I can help bring your product to life.</p>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-num">01 / 06</div>
-          <div class="service-icon"><i class="bi bi-search"></i></div>
-          <h3>User Research &amp; Discovery</h3>
-          <p>Understand your users, their goals, and the context they're in — through interviews, personas, journey maps, and competitor analysis.</p>
+      <div class="services-list">
+        <div class="service-row">
+          <div class="svc-num">N° 01</div>
+          <div class="svc-title">
+            <i class="bi bi-search svc-icon"></i>
+            <h3>User Research &amp; Discovery</h3>
+          </div>
+          <div class="svc-meta">Understand your users, their goals, and the context they're in — through interviews, personas, journey maps, and competitor analysis.</div>
         </div>
-        <div class="service-card">
-          <div class="service-num">02 / 06</div>
-          <div class="service-icon"><i class="bi bi-diagram-3"></i></div>
-          <h3>User Flows &amp; IA</h3>
-          <p>Map out clear, friction-free paths through your product so users always know where they are and what comes next.</p>
+        <div class="service-row">
+          <div class="svc-num">N° 02</div>
+          <div class="svc-title">
+            <i class="bi bi-diagram-3 svc-icon"></i>
+            <h3>User Flows &amp; IA</h3>
+          </div>
+          <div class="svc-meta">Map clear, friction-free paths through your product so users always know where they are and what comes next.</div>
         </div>
-        <div class="service-card">
-          <div class="service-num">03 / 06</div>
-          <div class="service-icon"><i class="bi bi-pencil-square"></i></div>
-          <h3>Wireframing</h3>
-          <p>Low-fidelity wireframes to validate structure and content priority before pixels — fast, cheap iterations, fewer surprises later.</p>
+        <div class="service-row">
+          <div class="svc-num">N° 03</div>
+          <div class="svc-title">
+            <i class="bi bi-pencil-square svc-icon"></i>
+            <h3>Wireframing</h3>
+          </div>
+          <div class="svc-meta">Low-fidelity wireframes to validate structure and content priority before pixels — fast, cheap iterations, fewer surprises.</div>
         </div>
-        <div class="service-card">
-          <div class="service-num">04 / 06</div>
-          <div class="service-icon"><i class="bi bi-palette"></i></div>
-          <h3>High-Fidelity UI</h3>
-          <p>Polished, on-brand screens crafted in Figma with attention to typography, spacing, color, and visual hierarchy.</p>
+        <div class="service-row">
+          <div class="svc-num">N° 04</div>
+          <div class="svc-title">
+            <i class="bi bi-palette svc-icon"></i>
+            <h3>High-Fidelity UI</h3>
+          </div>
+          <div class="svc-meta">Polished, on-brand screens crafted in Figma with intentional typography, spacing, color, and visual hierarchy.</div>
         </div>
-        <div class="service-card">
-          <div class="service-num">05 / 06</div>
-          <div class="service-icon"><i class="bi bi-magic"></i></div>
-          <h3>Interactive Prototypes</h3>
-          <p>Clickable Figma prototypes that simulate the real experience — perfect for usability testing and stakeholder demos.</p>
+        <div class="service-row">
+          <div class="svc-num">N° 05</div>
+          <div class="svc-title">
+            <i class="bi bi-magic svc-icon"></i>
+            <h3>Interactive Prototypes</h3>
+          </div>
+          <div class="svc-meta">Clickable Figma prototypes that simulate the real experience — perfect for usability testing and stakeholder demos.</div>
         </div>
-        <div class="service-card">
-          <div class="service-num">06 / 06</div>
-          <div class="service-icon"><i class="bi bi-grid-3x3-gap"></i></div>
-          <h3>Design Systems</h3>
-          <p>Reusable components, auto layout, and style tokens so your product stays consistent as it grows.</p>
+        <div class="service-row">
+          <div class="svc-num">N° 06</div>
+          <div class="svc-title">
+            <i class="bi bi-grid-3x3-gap svc-icon"></i>
+            <h3>Design Systems</h3>
+          </div>
+          <div class="svc-meta">Reusable components, auto layout, and style tokens so your product stays consistent as it grows.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DESIGN PROCESS -->
+  <!-- PROCESS -->
   <section id="process">
     <div class="container">
-      <div class="section-label">Process</div>
-      <h2 class="section-title">How I <span class="gradient-text">work</span></h2>
-      <p class="section-subtitle">A practical, repeatable process that turns ideas into usable products — informed by Google UX methodology and hands-on practice.</p>
+      <div class="eyebrow"><span class="num">04</span><span>Process</span><span class="line"></span></div>
+      <h2 class="section-title">How I <em>work</em>.</h2>
+      <p class="section-subtitle">A practical, repeatable process that turns ideas into usable products — informed by the Google UX methodology and hands-on practice.</p>
 
-      <div class="timeline">
+      <div class="process-list">
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-date">Step 01</span>
-              <span class="timeline-location"><i class="bi bi-search"></i>Discover</span>
-            </div>
-            <h3>Empathize &amp; Research</h3>
-            <div class="timeline-company">Understand the user &amp; the problem</div>
+        <div class="process-item">
+          <div class="process-step">i.</div>
+          <div class="process-content">
+            <div class="stage">Discover · Empathize</div>
+            <h3>Understand the user &amp; the problem.</h3>
             <ul>
               <li>Stakeholder &amp; user interviews to uncover real <strong>needs and frustrations</strong>.</li>
               <li>Competitor &amp; pattern analysis — what already works, what doesn't.</li>
               <li>Build <strong>personas, empathy maps, and journey maps</strong> as a shared source of truth.</li>
             </ul>
-            <div class="tech-pills">
-              <span class="tech-pill">Interviews</span>
-              <span class="tech-pill">Personas</span>
-              <span class="tech-pill">Empathy Maps</span>
-              <span class="tech-pill">Journey Maps</span>
+            <div class="process-tags">
+              <span class="tag">Interviews</span>
+              <span class="tag">Personas</span>
+              <span class="tag">Empathy Maps</span>
+              <span class="tag">Journey Maps</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-date">Step 02</span>
-              <span class="timeline-location"><i class="bi bi-diagram-3"></i>Define</span>
-            </div>
-            <h3>Frame the Problem</h3>
-            <div class="timeline-company">Turn research into clear direction</div>
+        <div class="process-item">
+          <div class="process-step">ii.</div>
+          <div class="process-content">
+            <div class="stage">Define · Frame</div>
+            <h3>Turn research into clear direction.</h3>
             <ul>
               <li>Synthesize findings into <strong>problem statements</strong> and design goals.</li>
               <li>Map <strong>user flows</strong> and information architecture for the key journeys.</li>
               <li>Prioritize features by impact, effort, and user value.</li>
             </ul>
-            <div class="tech-pills">
-              <span class="tech-pill">User Flows</span>
-              <span class="tech-pill">IA</span>
-              <span class="tech-pill">Problem Statements</span>
+            <div class="process-tags">
+              <span class="tag">User Flows</span>
+              <span class="tag">IA</span>
+              <span class="tag">Problem Statements</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-date">Step 03</span>
-              <span class="timeline-location"><i class="bi bi-pencil-square"></i>Ideate</span>
-            </div>
-            <h3>Sketch &amp; Wireframe</h3>
-            <div class="timeline-company">Explore solutions cheaply, before pixels</div>
+        <div class="process-item">
+          <div class="process-step">iii.</div>
+          <div class="process-content">
+            <div class="stage">Ideate · Sketch</div>
+            <h3>Explore solutions cheaply, before pixels.</h3>
             <ul>
               <li>Quick sketches and <strong>low-fidelity wireframes</strong> to validate structure.</li>
               <li>Iterate on layout, content priority, and navigation patterns.</li>
               <li>Align with stakeholders before committing to visual design.</li>
             </ul>
-            <div class="tech-pills">
-              <span class="tech-pill">Sketches</span>
-              <span class="tech-pill">Lo-Fi Wireframes</span>
-              <span class="tech-pill">Figma</span>
+            <div class="process-tags">
+              <span class="tag">Sketches</span>
+              <span class="tag">Lo-Fi Wireframes</span>
+              <span class="tag">Figma</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-date">Step 04</span>
-              <span class="timeline-location"><i class="bi bi-palette"></i>Design</span>
-            </div>
-            <h3>High-Fidelity UI</h3>
-            <div class="timeline-company">Make it beautiful, brand-aligned &amp; consistent</div>
+        <div class="process-item">
+          <div class="process-step">iv.</div>
+          <div class="process-content">
+            <div class="stage">Design · Refine</div>
+            <h3>Make it beautiful, brand-aligned &amp; consistent.</h3>
             <ul>
               <li>Apply <strong>typography, color, spacing, and visual hierarchy</strong> with intention.</li>
               <li>Build out reusable <strong>components and auto layout</strong> for a consistent system.</li>
               <li>Design for accessibility — contrast, touch targets, and readability.</li>
             </ul>
-            <div class="tech-pills">
-              <span class="tech-pill">Hi-Fi Screens</span>
-              <span class="tech-pill">Components</span>
-              <span class="tech-pill">Auto Layout</span>
-              <span class="tech-pill">Design Tokens</span>
+            <div class="process-tags">
+              <span class="tag">Hi-Fi Screens</span>
+              <span class="tag">Components</span>
+              <span class="tag">Auto Layout</span>
+              <span class="tag">Design Tokens</span>
             </div>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-date">Step 05</span>
-              <span class="timeline-location"><i class="bi bi-magic"></i>Prototype &amp; Test</span>
-            </div>
-            <h3>Prototype, Test &amp; Refine</h3>
-            <div class="timeline-company">Validate with real users — iterate fast</div>
+        <div class="process-item">
+          <div class="process-step">v.</div>
+          <div class="process-content">
+            <div class="stage">Prototype · Test</div>
+            <h3>Validate with real users — iterate fast.</h3>
             <ul>
               <li>Build <strong>interactive Figma prototypes</strong> that feel like the real product.</li>
               <li>Run <strong>usability tests</strong>; observe what works and what confuses people.</li>
               <li>Refine flows, micro-interactions, and copy based on what we learn.</li>
             </ul>
-            <div class="tech-pills">
-              <span class="tech-pill">Interactive Prototype</span>
-              <span class="tech-pill">Usability Testing</span>
-              <span class="tech-pill">Iteration</span>
+            <div class="process-tags">
+              <span class="tag">Interactive Prototype</span>
+              <span class="tag">Usability Testing</span>
+              <span class="tag">Iteration</span>
             </div>
           </div>
         </div>
@@ -1525,8 +1540,8 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <div class="section-label">Selected work</div>
-      <h2 class="section-title">Featured <span class="gradient-text">projects</span></h2>
+      <div class="eyebrow"><span class="num">05</span><span>Selected Work</span><span class="line"></span></div>
+      <h2 class="section-title">Featured <em>projects</em>.</h2>
       <p class="section-subtitle">Mobile UI/UX projects taken from research to high-fidelity screens in Figma.</p>
 
       <div class="projects-grid">
@@ -1535,23 +1550,26 @@
           <div class="project-visual home-repair">
             <i class="bi bi-tools"></i>
           </div>
-          <div class="project-header">
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag-cat">Mobile · UI/UX</span>
+              <span>Case Study 01</span>
+            </div>
             <h3>Home Repair App</h3>
-            <span class="project-tag">Mobile · UI/UX</span>
-          </div>
-          <p class="project-client">Self-driven case study · End-to-end Figma project</p>
-          <ul>
-            <li>Designed <strong>user flows</strong> connecting customers with trusted service technicians.</li>
-            <li>Created clear <strong>booking, scheduling, and payment</strong> interfaces.</li>
-            <li>Focused on <strong>trust, clarity, and ease of use</strong> for first-time users.</li>
-            <li>Delivered <strong>high-fidelity screens</strong> in Figma with reusable components.</li>
-          </ul>
-          <div class="tech-pills">
-            <span class="tech-pill">Figma</span>
-            <span class="tech-pill">User Flows</span>
-            <span class="tech-pill">Hi-Fi UI</span>
-            <span class="tech-pill">Booking UX</span>
-            <span class="tech-pill">Payments UX</span>
+            <p class="project-client">Self-driven · End-to-end Figma project</p>
+            <ul>
+              <li>Designed <strong>user flows</strong> connecting customers with trusted service technicians.</li>
+              <li>Created clear <strong>booking, scheduling, and payment</strong> interfaces.</li>
+              <li>Focused on <strong>trust, clarity, and ease of use</strong> for first-time users.</li>
+              <li>Delivered <strong>high-fidelity screens</strong> in Figma with reusable components.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">User Flows</span>
+              <span class="tag">Hi-Fi UI</span>
+              <span class="tag">Booking UX</span>
+              <span class="tag">Payments UX</span>
+            </div>
           </div>
         </div>
 
@@ -1559,23 +1577,26 @@
           <div class="project-visual sleep-app">
             <i class="bi bi-moon-stars"></i>
           </div>
-          <div class="project-header">
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag-cat">Mobile · UI/UX</span>
+              <span>Case Study 02</span>
+            </div>
             <h3>Sleep App</h3>
-            <span class="project-tag">Mobile · UI/UX</span>
-          </div>
-          <p class="project-client">Self-driven case study · End-to-end Figma project</p>
-          <ul>
-            <li>Designed <strong>end-to-end user experience</strong> for a sleep-focused mobile application.</li>
-            <li>Created <strong>user flows, wireframes, and high-fidelity screens</strong> in Figma.</li>
-            <li>Focused on calm visual design, <strong>accessibility</strong>, and ease of use.</li>
-            <li>Applied <strong>typography, spacing, and color psychology</strong> to enhance relaxation.</li>
-          </ul>
-          <div class="tech-pills">
-            <span class="tech-pill">Figma</span>
-            <span class="tech-pill">Wireframes</span>
-            <span class="tech-pill">Hi-Fi UI</span>
-            <span class="tech-pill">Color Psychology</span>
-            <span class="tech-pill">Accessibility</span>
+            <p class="project-client">Self-driven · End-to-end Figma project</p>
+            <ul>
+              <li>Designed <strong>end-to-end user experience</strong> for a sleep-focused mobile application.</li>
+              <li>Created <strong>user flows, wireframes, and high-fidelity screens</strong> in Figma.</li>
+              <li>Focused on calm visual design, <strong>accessibility</strong>, and ease of use.</li>
+              <li>Applied <strong>typography, spacing, and color psychology</strong> to enhance relaxation.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Wireframes</span>
+              <span class="tag">Hi-Fi UI</span>
+              <span class="tag">Color Psychology</span>
+              <span class="tag">Accessibility</span>
+            </div>
           </div>
         </div>
 
@@ -1584,24 +1605,29 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications">
+  <section id="certifications" style="padding: 120px 0 0;">
     <div class="container">
-      <div class="section-label">Certifications &amp; Courses</div>
-      <h2 class="section-title">Continuous <span class="gradient-text">learning</span></h2>
+      <div class="eyebrow"><span class="num">06</span><span>Credentials</span><span class="line"></span></div>
+      <h2 class="section-title">Continuous <em>learning</em>.</h2>
       <p class="section-subtitle">Structured training that has shaped the way I think about users, research, and visual design.</p>
-
+    </div>
+    <div class="container" style="padding: 0;">
       <div class="certs-grid">
         <div class="cert-card">
           <div class="cert-icon"><i class="bi bi-google"></i></div>
-          <h4>Google UX Design Specialization</h4>
-          <div class="cert-issuer">Google · Coursera</div>
-          <p>End-to-end UX methodology: empathize, define, ideate, prototype, and test. Includes hands-on portfolio projects.</p>
+          <div>
+            <h4>Google UX Design Specialization</h4>
+            <div class="cert-issuer">Google · Coursera</div>
+            <p>End-to-end UX methodology: empathize, define, ideate, prototype, and test. Includes hands-on portfolio projects.</p>
+          </div>
         </div>
         <div class="cert-card">
           <div class="cert-icon"><i class="bi bi-palette2"></i></div>
-          <h4>Figma UI/UX Design Essentials</h4>
-          <div class="cert-issuer">Udemy</div>
-          <p>Deep dive into Figma — auto layout, components, variants, prototyping, and building scalable design systems.</p>
+          <div>
+            <h4>Figma UI/UX Design Essentials</h4>
+            <div class="cert-issuer">Udemy</div>
+            <p>Deep dive into Figma — auto layout, components, variants, prototyping, and building scalable design systems.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1610,9 +1636,11 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <div class="section-label">Get in touch</div>
-      <h2 class="section-title">Let's design <span class="gradient-text">something delightful</span></h2>
-      <p class="section-subtitle">Open to junior UI/UX roles, internships, and freelance design projects. I usually reply within 24 hours.</p>
+      <div class="contact-hero">
+        <div class="eyebrow" style="justify-content: center;"><span class="num">07</span><span>Get in touch</span></div>
+        <h2 class="section-title">Let's design<br/><em>something delightful.</em></h2>
+        <p class="lead">Open to junior UI/UX roles, internships, and freelance design projects. I usually reply within 24 hours.</p>
+      </div>
 
       <div class="contact-grid">
         <div class="contact-info-list">
@@ -1626,7 +1654,7 @@
           <a href="tel:+201095820021" class="contact-info-card">
             <div class="icon-box"><i class="bi bi-telephone"></i></div>
             <div>
-              <div class="label">Phone / WhatsApp</div>
+              <div class="label">Phone · WhatsApp</div>
               <div class="value">+20 1095820021</div>
             </div>
           </a>
@@ -1648,7 +1676,7 @@
             <div class="icon-box"><i class="bi bi-behance"></i></div>
             <div>
               <div class="label">Behance</div>
-              <div class="value">See my case studies</div>
+              <div class="value">See case studies</div>
             </div>
           </a>
         </div>
@@ -1672,16 +1700,17 @@
             <label for="message">Message</label>
             <textarea name="message" id="message" rows="6" required></textarea>
           </div>
-          <button type="submit" class="form-submit">Send Message <i class="bi bi-send"></i></button>
+          <button type="submit" class="form-submit">Send Message <i class="bi bi-arrow-up-right"></i></button>
         </form>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <div>&copy; <span id="year"></span> Amira Basuony Ammar · All rights reserved.</div>
-      <div class="made-with">Designed with care · Figma &amp; coffee ☕</div>
+    <div class="footer-inner">
+      <div>&copy; <span id="year"></span> · Amira Basuony Ammar</div>
+      <div class="made-with">Designed with care — Figma &amp; coffee.</div>
+      <div>Egypt → Worldwide</div>
     </div>
   </footer>
 
@@ -1689,21 +1718,21 @@
     // Typed effect
     (function(){
       const words = [
-        'Designing simple, intuitive mobile experiences.',
-        'Turning user research into clear, usable screens.',
-        'Crafting design systems in Figma.',
-        'Building wireframes, prototypes, and hi-fi UI.',
-        'Designing with empathy, clarity, and care.'
+        'designing simple, intuitive mobile experiences.',
+        'turning user research into clear, usable screens.',
+        'crafting design systems in figma.',
+        'building wireframes, prototypes, and hi-fi ui.',
+        'designing with empathy, clarity, and care.'
       ];
       const el = document.getElementById('typed');
       let wi = 0, ci = 0, deleting = false;
       function tick() {
         const word = words[wi];
         if (!deleting) {
-          el.textContent = word.slice(0, ++ci);
+          el.textContent = '> ' + word.slice(0, ++ci);
           if (ci === word.length) { deleting = true; setTimeout(tick, 1800); return; }
         } else {
-          el.textContent = word.slice(0, --ci);
+          el.textContent = '> ' + word.slice(0, --ci);
           if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
         }
         setTimeout(tick, deleting ? 30 : 60);
@@ -1733,7 +1762,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.stat-card, .skill-cat, .service-card, .timeline-item, .project-card, .cert-card, .feature-card').forEach(el => {
+    document.querySelectorAll('.stat-card, .skill-cat, .service-row, .process-item, .project-card, .cert-card, .feature-row').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
