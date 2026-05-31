@@ -716,14 +716,20 @@
       overflow: hidden;
       border-bottom: 1px solid var(--ink);
     }
-    .project-visual.home-repair {
-      background: #f0d9c4;
-      color: #5d2a16;
+    .project-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      transition: transform 0.6s ease;
     }
-    .project-visual.sleep-app {
-      background: #c4cde0;
-      color: #1d2540;
-    }
+    .project-card:hover .project-visual img { transform: scale(1.04); }
+    .project-visual.vendo { background: linear-gradient(135deg, #c75d2a 0%, #6e2c12 100%); color: #fff1e3; }
+    .project-visual.home-services { background: linear-gradient(135deg, #d8e4cf 0%, #6e9c5a 100%); color: #1f3d1a; }
+    .project-visual.rmgx { background: linear-gradient(135deg, #1a1a2e 0%, #4f3a8e 100%); color: #ece7ff; }
+    .project-visual.nocty { background: linear-gradient(135deg, #2a1840 0%, #6b3aa0 60%, #1c2a4e 100%); color: #ece7ff; }
     .project-visual::before {
       content: '';
       position: absolute;
@@ -732,12 +738,13 @@
         linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
       background-size: 24px 24px;
+      z-index: 1;
     }
     .project-visual i {
       position: relative;
       z-index: 1;
       font-size: 120px;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
     }
     .project-body {
       padding: 36px 32px;
@@ -798,6 +805,33 @@
       padding-top: 20px;
       border-top: 1px solid var(--rule);
       margin-top: auto;
+    }
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 12px 18px;
+      background: transparent;
+      border: 1px solid var(--ink);
+      border-radius: 100px;
+      color: var(--ink);
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      align-self: flex-start;
+      transition: all 0.25s ease;
+    }
+    .project-link:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+    /* When there are only 3 cards, span the orphan last card across both columns */
+    .projects-grid > .project-card:nth-child(3):last-child {
+      grid-column: 1 / -1;
+    }
+    .projects-grid > .project-card:nth-child(3):last-child .project-visual {
+      height: 380px;
     }
 
     /* Certifications */
@@ -1475,56 +1509,89 @@
       <div class="projects-grid">
 
         <div class="project-card">
-          <div class="project-visual home-repair">
-            <i class="bi bi-tools"></i>
+          <div class="project-visual vendo">
+            <img src="assets/img/vendo.jpg" alt="Vendo — E-Commerce Admin Dashboard cover" onerror="this.style.display='none'" />
+            <i class="bi bi-bar-chart-line"></i>
           </div>
           <div class="project-body">
             <div class="project-meta">
-              <span class="tag-cat">Mobile · UI/UX</span>
+              <span class="tag-cat">Web · Admin Dashboard</span>
               <span>Case Study 01</span>
             </div>
-            <h3>Home Repair App</h3>
-            <p class="project-client">Self-driven · End-to-end Figma project</p>
+            <h3>Vendo — E-Commerce Admin Dashboard</h3>
+            <p class="project-client">A calm command center for running an online store.</p>
             <ul>
-              <li>Designed <strong>user flows</strong> connecting customers with trusted service technicians.</li>
-              <li>Created clear <strong>booking, scheduling, and payment</strong> interfaces.</li>
-              <li>Focused on <strong>trust, clarity, and ease of use</strong> for first-time users.</li>
-              <li>Delivered <strong>high-fidelity screens</strong> in Figma with reusable components.</li>
+              <li>Designed a dark, focused dashboard that surfaces <strong>revenue, orders, conversion rate, and AOV</strong> at a glance.</li>
+              <li>Crafted modular stat cards, a <strong>revenue-over-time chart</strong>, and live panels for top products, recent orders, and inventory alerts.</li>
+              <li>Sidebar covering Orders, Customers, Analytics, Reports, and Settings — every key job one click away.</li>
+              <li>Built a reusable <strong>component library and dark theme</strong> in Figma for fast, consistent iteration.</li>
             </ul>
             <div class="project-tags">
               <span class="tag">Figma</span>
-              <span class="tag">User Flows</span>
-              <span class="tag">Hi-Fi UI</span>
-              <span class="tag">Booking UX</span>
-              <span class="tag">Payments UX</span>
+              <span class="tag">Dashboard UI</span>
+              <span class="tag">Data Viz</span>
+              <span class="tag">Dark Theme</span>
+              <span class="tag">Design System</span>
             </div>
+            <a class="project-link" href="https://www.behance.net/gallery/247012359/Vendo-E-Commerce-Admin-Dashboard" target="_blank" rel="noopener">View on Behance <i class="bi bi-arrow-up-right"></i></a>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-visual sleep-app">
-            <i class="bi bi-moon-stars"></i>
+          <div class="project-visual home-services">
+            <img src="assets/img/home-services.jpg" alt="Home Services App cover" onerror="this.style.display='none'" />
+            <i class="bi bi-house-heart"></i>
           </div>
           <div class="project-body">
             <div class="project-meta">
               <span class="tag-cat">Mobile · UI/UX</span>
               <span>Case Study 02</span>
             </div>
-            <h3>Sleep App</h3>
-            <p class="project-client">Self-driven · End-to-end Figma project</p>
+            <h3>Home Services App</h3>
+            <p class="project-client">Booking trusted home services in just two taps.</p>
             <ul>
-              <li>Designed <strong>end-to-end user experience</strong> for a sleep-focused mobile application.</li>
-              <li>Created <strong>user flows, wireframes, and high-fidelity screens</strong> in Figma.</li>
-              <li>Focused on calm visual design, <strong>accessibility</strong>, and ease of use.</li>
-              <li>Applied <strong>typography, spacing, and color psychology</strong> to enhance relaxation.</li>
+              <li>Designed a warm, illustration-led mobile experience for booking <strong>cleaning, plumbing, electrical, carpentry, and AC</strong> services.</li>
+              <li>Personalised "Good Morning" greeting and a featured <strong>Deep Cleaning Bundle</strong> to convert first-time users.</li>
+              <li>Clear service categories with iconography, plus a <strong>"Book Again"</strong> shortcut on recent orders to remove friction for return customers.</li>
+              <li>Built a friendly green design system with high-fidelity screens and reusable components in Figma.</li>
             </ul>
             <div class="project-tags">
               <span class="tag">Figma</span>
-              <span class="tag">Wireframes</span>
+              <span class="tag">Mobile UI</span>
+              <span class="tag">Booking UX</span>
+              <span class="tag">Illustration</span>
               <span class="tag">Hi-Fi UI</span>
+            </div>
+            <a class="project-link" href="https://www.behance.net/gallery/244812575/Home-Services-App" target="_blank" rel="noopener">View on Behance <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-visual nocty">
+            <img src="assets/img/nocty.jpg" alt="Nocty — Sleep Tracking App cover" onerror="this.style.display='none'" />
+            <i class="bi bi-moon-stars"></i>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag-cat">Mobile · UI/UX</span>
+              <span>Case Study 03</span>
+            </div>
+            <h3>Nocty — Sleep Tracking App</h3>
+            <p class="project-client">A calmer way to fall asleep — and a clearer view of how you slept.</p>
+            <ul>
+              <li>Designed a soothing sleep companion with curated <strong>soundscapes</strong> ("Soft Night, 45 min") and ambient visuals.</li>
+              <li>Built a <strong>sleep-tracking dashboard</strong> with goals, history, and bedtime targets surfaced in a glanceable view.</li>
+              <li>Used a <strong>deep purple palette</strong>, gentle micro-interactions, and accessible typography to reduce evening eye strain.</li>
+              <li>End-to-end flow in Figma: onboarding → sound library → tracking → morning summary, with consistent components throughout.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Mobile UI</span>
+              <span class="tag">Dark Theme</span>
               <span class="tag">Color Psychology</span>
               <span class="tag">Accessibility</span>
             </div>
+            <a class="project-link" href="https://www.behance.net/gallery/242171611/Nocty-Sleep-Tracking-UIUX" target="_blank" rel="noopener">View on Behance <i class="bi bi-arrow-up-right"></i></a>
           </div>
         </div>
 
