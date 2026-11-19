@@ -727,6 +727,8 @@
       transition: transform 0.6s ease;
     }
     .project-card:hover .project-visual img { transform: scale(1.04); }
+    .project-visual.gahez img { object-position: center 42%; }
+    .project-visual.nocty img { object-position: center 41%; }
     .project-visual.vendo {
       background: radial-gradient(ellipse at top, #c75d2a 0%, #8a3a17 55%, #4a1d09 100%);
       color: #fff1e3;
@@ -1214,11 +1216,11 @@
       transition: all 0.25s ease;
     }
     .project-link:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
-    /* When there are only 3 cards, span the orphan last card across both columns */
-    .projects-grid > .project-card:nth-child(3):last-child {
+    /* With an odd number of cards, span the orphan last card across both columns */
+    .projects-grid > .project-card:nth-child(odd):last-child {
       grid-column: 1 / -1;
     }
-    .projects-grid > .project-card:nth-child(3):last-child .project-visual {
+    .projects-grid > .project-card:nth-child(odd):last-child .project-visual {
       height: 380px;
     }
 
@@ -1897,13 +1899,41 @@
       <div class="projects-grid">
 
         <div class="project-card">
+          <div class="project-visual gahez">
+            <img src="assets/img/gahez.jpg" alt="Gahez — Food Delivery App cover" />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="tag-cat">Mobile · UI/UX · Arabic</span>
+              <span>Case Study 01</span>
+            </div>
+            <h3>Gahez — Food Delivery App</h3>
+            <p class="project-client">From craving to checkout in a few taps, designed Arabic-first.</p>
+            <ul>
+              <li>Designed a fully <strong>right-to-left Arabic</strong> food-delivery experience, from the restaurant page through to the cart.</li>
+              <li>Restaurant header that answers the key questions before ordering: <strong>rating, cuisine, delivery time, and delivery fee</strong>.</li>
+              <li><strong>"Order with your friends"</strong> group ordering that splits the bill so each person pays for their own order.</li>
+              <li>Quick filter chips, menu cards with one-tap add, and a <strong>sticky cart bar</strong> showing item count and total.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Mobile UI</span>
+              <span class="tag">RTL / Arabic</span>
+              <span class="tag">Food Delivery</span>
+              <span class="tag">Group Ordering</span>
+            </div>
+            <a class="project-link" href="https://www.behance.net/gallery/254074415/Gahez-Food-Delivery-app" target="_blank" rel="noopener">View on Behance <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card">
           <div class="project-visual vendo">
             <img src="assets/img/vendo.webp" alt="Vendo — E-Commerce Admin Dashboard cover" />
           </div>
           <div class="project-body">
             <div class="project-meta">
               <span class="tag-cat">Web · Admin Dashboard</span>
-              <span>Case Study 01</span>
+              <span>Case Study 02</span>
             </div>
             <h3>Vendo — E-Commerce Admin Dashboard</h3>
             <p class="project-client">A calm command center for running an online store.</p>
@@ -1931,7 +1961,7 @@
           <div class="project-body">
             <div class="project-meta">
               <span class="tag-cat">Mobile · UI/UX</span>
-              <span>Case Study 02</span>
+              <span>Case Study 03</span>
             </div>
             <h3>Home Services App</h3>
             <p class="project-client">Booking trusted home services in just two taps.</p>
@@ -1959,7 +1989,7 @@
           <div class="project-body">
             <div class="project-meta">
               <span class="tag-cat">Web · Internal Platform</span>
-              <span>Case Study 03</span>
+              <span>Case Study 04</span>
             </div>
             <h3>RMgX Workspace</h3>
             <p class="project-client">A unified internal platform for a globally distributed product team.</p>
@@ -1987,7 +2017,7 @@
           <div class="project-body">
             <div class="project-meta">
               <span class="tag-cat">Mobile · UI/UX</span>
-              <span>Case Study 04</span>
+              <span>Case Study 05</span>
             </div>
             <h3>Nocty — Sleep Tracking App</h3>
             <p class="project-client">A calmer way to fall asleep — and a clearer view of how you slept.</p>
